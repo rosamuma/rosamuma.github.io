@@ -1,0 +1,173 @@
+/* Colores principales */
+:root {
+    --rose-pink: #f4c2c2;
+    --dark-coffee: #3e2723;
+    --light-coffee: #795548;
+    --left-background: #ffe6e6;
+    --right-background: #fafafa;
+    --text-color: #333;
+    --border-color: #e0e0e0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--right-background);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 20px;
+    background: linear-gradient(135deg, var(--rose-pink), var(--dark-coffee));
+    border-radius: 20px 20px 0 0;
+    color: white;
+    padding: 30px 0;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    background-color: var(--rose-pink);
+    border-radius: 50%;
+    margin: 0 auto;
+    background-image: url('fotoHV.jpeg');
+    background-size: cover;
+    background-position: center;
+    border: 5px solid white;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+.job-title {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.left-column, .right-column {
+    width: 48%;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Estilos creativos con curvas */
+.left-column {
+    background-color: var(--left-background);
+    border-radius: 20px 0 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.right-column {
+    background-color: var(--right-background);
+    border-radius: 0 20px 20px 0;
+    padding-bottom: 20px;
+}
+
+.left-column::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: var(--dark-coffee);
+    border-radius: 50%;
+    z-index: 0;
+    opacity: 0.2;
+}
+
+.left-column::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background-color: var(--rose-pink);
+    border-radius: 50%;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.left-column h2, .right-column h2 {
+    font-size: 1.5rem;
+    color: var(--dark-coffee);
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--light-coffee);
+}
+
+p, ul {
+    font-size: 1rem;
+    line-height: 1.6;
+    z-index: 1;
+    position: relative;
+       list-style-type: none;
+}
+
+.contact-info p, .skills ul li, .job ul li {
+    margin-bottom: 10px;
+}
+
+.skills ul {
+    list-style-type: none;
+}
+
+.job {
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.job h3 {
+    font-size: 1.2rem;
+    color: var(--dark-coffee);
+}
+
+.job .date {
+    /*font-size: 0.9rem;*/
+    color: var(--light-coffee);
+}
+
+.role {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Estilos para los íconos */
+.contact-info i, .skills i, .job i, .education i {
+    color: var(--light-coffee);
+    margin-right: 10px;
+}
+
+ul li i {
+    color: var(--rose-pink);
+    margin-right: 8px;
+}
+
+
